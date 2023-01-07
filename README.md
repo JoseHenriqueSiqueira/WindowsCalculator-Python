@@ -6,8 +6,9 @@
     Working on adding and subtracting whole numbers (I haven't added float values ​​yet).
 </pre>
 
-<p align="center">
-  <img src="/images/PrintScreen.png?raw=true">
+<p float="left">
+  <img src="/images/SumScreen.png?raw=true">
+  <img src="/images/SubScreen.png?raw=true">
 </p>
 
 ## Requirements
