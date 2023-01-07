@@ -5,7 +5,10 @@
 <pre>
     Working on adding and subtracting whole numbers (I haven't added float values ​​yet).
 </pre>
-![Image](/images/PrintScreen.png?raw=true)
+
+<p align="center">
+  <img src="/images/PrintScreen.png?raw=true">
+</p>
 
 ## Requirements
  ![Python](https://img.shields.io/badge/Python-v3.9-blue)
