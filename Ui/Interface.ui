@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>470</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe MDL2 Assets</family>
+    <pointsize>28</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Calculadora</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(243, 243, 243);</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>173</y>
+     <width>77</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(249, 249, 249);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius:4px;
+}
+
+QPushButton::hover{
+	background-color: rgb(246, 246, 246);
+}
+
+QPushButton::pressed{
+	background-color: rgb(244, 244, 244);
+	color:rgb(93, 93, 93);
+}</string>
+   </property>
+   <property name="text">
+    <string>%</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>83</x>
+     <y>173</y>
+     <width>76</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(249, 249, 249);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius:4px;
+}
+
+QPushButton::hover{
+	background-color: rgb(246, 246, 246);
+}
+
+QPushButton::pressed{
+	background-color: rgb(244, 244, 244);
+	color:rgb(93, 93, 93);
+}</string>
+   </property>
+   <property name="text">
+    <string>CE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnreset">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>173</y>
+     <width>77</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(249, 249, 249);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius:4px;
+}
+
+QPushButton::hover{
+	background-color: rgb(246, 246, 246);
+}
+
+QPushButton::pressed{
+	background-color: rgb(244, 244, 244);
+	color:rgb(93, 93, 93);
+}</string>
+   </property>
+   <property name="text">
+    <string>C</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btndel">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>173</y>
+     <width>76</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(249, 249, 249);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius:4px;
+}
+
+QPushButton::hover{
+	background-color: rgb(246, 246, 246);
+}
+
+QPushButton::pressed{
+	background-color: rgb(244, 244, 244);
+	color:rgb(93, 93, 93);
+}</string>
+   </property>
+   <property name="text">
+    <string>DEL</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>222</y>
+     <width>77</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(249, 249, 249);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius:4px;
+}
+
+QPushButton::hover{
+	background-color: rgb(246, 246, 246);
+}
+
+QPushButton::pressed{
+	background-color: rgb(244, 244, 244);
+	color:rgb(93, 93, 93);
+}</string>
+   </property>
+   <property name="text">
+    <string>1/x</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>419</y>
+     <width>77</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color:rgb(27, 27, 27);
+}
+
+QPushButton::hover{
+	background-color: rgb(252, 252, 252);
+}
+
+QPushButton::pressed{
+	background-color: rgb(249, 249, 249);
+	color:rgb(95, 95, 95);
+}</string>
+   </property>
+   <property name="text">
+    <string>π</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn1">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>369</y>
+     <width>77</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color:rgb(27, 27, 27);
+}
+
+QPushButton::hover{
+	background-color: rgb(252, 252, 252);
+}
+
+QPushButton::pressed{
+	background-color: rgb(249, 249, 249);
+	color:rgb(95, 95, 95);
+}</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn4">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>320</y>
+     <width>77</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color:rgb(27, 27, 27);
+}
+
+QPushButton::hover{
+	background-color: rgb(252, 252, 252);
+}
+
+QPushButton::pressed{
+	background-color: rgb(249, 249, 249);
+	color:rgb(95, 95, 95);
+}</string>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn7">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>271</y>
+     <width>77</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color:rgb(27, 27, 27);
+}
+
+QPushButton::hover{
+	background-color: rgb(252, 252, 252);
+}
+
+QPushButton::pressed{
+	background-color: rgb(249, 249, 249);
+	color:rgb(95, 95, 95);
+}</string>
+   </property>
+   <property name="text">
+    <string>7</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_10">
+   <property name="geometry">
+    <rect>
+     <x>83</x>
+     <y>222</y>
+     <width>76</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(249, 249, 249);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius:4px;
+}
+
+QPushButton::hover{
+	background-color: rgb(246, 246, 246);
+}
+
+QPushButton::pressed{
+	background-color: rgb(244, 244, 244);
+	color:rgb(93, 93, 93);
+}</string>
+   </property>
+   <property name="text">
+    <string>x²</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="raiz">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>222</y>
+     <width>77</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(249, 249, 249);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius:4px;
+}
+
+QPushButton::hover{
+	background-color: rgb(246, 246, 246);
+}
+
+QPushButton::pressed{
+	background-color: rgb(244, 244, 244);
+	color:rgb(93, 93, 93);
+}</string>
+   </property>
+   <property name="text">
+    <string>√x</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn8">
+   <property name="geometry">
+    <rect>
+     <x>83</x>
+     <y>271</y>
+     <width>76</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color:rgb(27, 27, 27);
+}
+
+QPushButton::hover{
+	background-color: rgb(252, 252, 252);
+}
+
+QPushButton::pressed{
+	background-color: rgb(249, 249, 249);
+	color:rgb(95, 95, 95);
+}</string>
+   </property>
+   <property name="text">
+    <string>8</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_13">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>222</y>
+     <width>76</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(249, 249, 249);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius:4px;
+}
+
+QPushButton::hover{
+	background-color: rgb(246, 246, 246);
+}
+
+QPushButton::pressed{
+	background-color: rgb(244, 244, 244);
+	color:rgb(93, 93, 93);
+}</string>
+   </property>
+   <property name="text">
+    <string>÷</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn9">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>271</y>
+     <width>77</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color:rgb(27, 27, 27);
+}
+
+QPushButton::hover{
+	background-color: rgb(252, 252, 252);
+}
+
+QPushButton::pressed{
+	background-color: rgb(249, 249, 249);
+	color:rgb(95, 95, 95);
+}</string>
+   </property>
+   <property name="text">
+    <string>9</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_15">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>271</y>
+     <width>76</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(249, 249, 249);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius:4px;
+}
+
+QPushButton::hover{
+	background-color: rgb(246, 246, 246);
+}
+
+QPushButton::pressed{
+	background-color: rgb(244, 244, 244);
+	color:rgb(93, 93, 93);
+}</string>
+   </property>
+   <property name="text">
+    <string>x</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn6">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>320</y>
+     <width>77</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color:rgb(27, 27, 27);
+}
+
+QPushButton::hover{
+	background-color: rgb(252, 252, 252);
+}
+
+QPushButton::pressed{
+	background-color: rgb(249, 249, 249);
+	color:rgb(95, 95, 95);
+}</string>
+   </property>
+   <property name="text">
+    <string>6</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn2">
+   <property name="geometry">
+    <rect>
+     <x>83</x>
+     <y>369</y>
+     <width>76</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color:rgb(27, 27, 27);
+}
+
+QPushButton::hover{
+	background-color: rgb(252, 252, 252);
+}
+
+QPushButton::pressed{
+	background-color: rgb(249, 249, 249);
+	color:rgb(95, 95, 95);
+}</string>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn5">
+   <property name="geometry">
+    <rect>
+     <x>83</x>
+     <y>320</y>
+     <width>76</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color:rgb(27, 27, 27);
+}
+
+QPushButton::hover{
+	background-color: rgb(252, 252, 252);
+}
+
+QPushButton::pressed{
+	background-color: rgb(249, 249, 249);
+	color:rgb(95, 95, 95);
+}</string>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnsub">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>320</y>
+     <width>76</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(249, 249, 249);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius:4px;
+}
+
+QPushButton::hover{
+	background-color: rgb(246, 246, 246);
+}
+
+QPushButton::pressed{
+	background-color: rgb(244, 244, 244);
+	color:rgb(93, 93, 93);
+}</string>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnsum">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>369</y>
+     <width>76</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>18</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+     <kerning>true</kerning>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(249, 249, 249);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius:4px;
+}
+
+QPushButton::hover{
+	background-color: rgb(246, 246, 246);
+}
+
+QPushButton::pressed{
+	background-color: rgb(244, 244, 244);
+	color:rgb(93, 93, 93);
+}</string>
+   </property>
+   <property name="text">
+    <string>+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn3">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>369</y>
+     <width>77</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color:rgb(27, 27, 27);
+}
+
+QPushButton::hover{
+	background-color: rgb(252, 252, 252);
+}
+
+QPushButton::pressed{
+	background-color: rgb(249, 249, 249);
+	color:rgb(95, 95, 95);
+}</string>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn0">
+   <property name="geometry">
+    <rect>
+     <x>83</x>
+     <y>419</y>
+     <width>76</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color:rgb(27, 27, 27);
+}
+
+QPushButton::hover{
+	background-color: rgb(252, 252, 252);
+}
+
+QPushButton::pressed{
+	background-color: rgb(249, 249, 249);
+	color:rgb(95, 95, 95);
+}</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnresult">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>419</y>
+     <width>76</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+     <stylestrategy>PreferDefault</stylestrategy>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(0, 90, 158);
+	color:rgb(218, 231, 241);
+	border :1px solid #005A9E;
+	border-radius: 5%  4.3%;
+	text-align: center;
+	position: absolute;	
+}
+
+QPushButton::hover{
+	background-color: rgb(25, 106, 167);
+}
+
+QPushButton::pressed{
+	background-color: rgb(49, 121, 175);
+	color:rgb(173, 201, 223);
+}</string>
+   </property>
+   <property name="text">
+    <string>=</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_24">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>419</y>
+     <width>77</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic Semilight</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border :1px solid #E5E5E5;
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color:rgb(27, 27, 27);
+}
+
+QPushButton::hover{
+	background-color: rgb(252, 252, 252);
+}
+
+QPushButton::pressed{
+	background-color: rgb(249, 249, 249);
+	color:rgb(95, 95, 95);
+}</string>
+   </property>
+   <property name="text">
+    <string>,</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>311</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Malgun Gothic</family>
+     <pointsize>35</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>48</y>
+     <width>298</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Leelawadee UI Semilight</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
