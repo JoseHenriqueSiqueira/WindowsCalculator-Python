@@ -17,7 +17,8 @@
 
 <p float="left">
   <img src="/images/SumScreen.png?raw=true">
-  <img srt="/images/MultScreen.png?raw=true">
+  <img src="/images/SubScreen.png?raw=true">
+  <img src="/images/MultScreen.png?raw=true">
 </p>
 
 ## Requirements
