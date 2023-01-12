@@ -532,7 +532,7 @@ QPushButton::pressed{
     <string>9</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_15">
+  <widget class="QPushButton" name="btnmult">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -937,6 +937,9 @@ QPushButton::pressed{
    </property>
    <property name="text">
     <string>0</string>
+   </property>
+   <property name="maxLength">
+    <number>17</number>
    </property>
    <property name="frame">
     <bool>false</bool>
