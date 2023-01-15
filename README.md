@@ -6,9 +6,18 @@
 <img src="/images/SumScreen.png?raw=true">
 <img src="/images/SubScreen.png?raw=true">
 <img src="/images/MultScreen.png?raw=true">
+<img src="/images/DivScreen.png?raw=true">
 </p>
 
 ## Updates
+
+![Update](https://img.shields.io/badge/update%20data-15%2F01%2F2023-brightgreen)
+<pre>  
+    -Added Div function
+    -Updated the functionality of using the keyboard to enter numbers and operations. Now when pressing the buttons on the keyboard, the CSS is activated.
+    -Implemented dynamic font according to the size of the number in LineEdit
+    -Code has had more optimizations and more simplifications, drastically reducing its size!
+</pre>
 
 ![Update](https://img.shields.io/badge/update%20data-12%2F01%2F2023-brightgreen)
 <pre>  

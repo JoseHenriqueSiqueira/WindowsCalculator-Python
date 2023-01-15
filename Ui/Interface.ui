@@ -459,7 +459,7 @@ QPushButton::pressed{
     <string>8</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_13">
+  <widget class="QPushButton" name="btndiv">
    <property name="geometry">
     <rect>
      <x>240</x>
