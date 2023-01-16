@@ -878,7 +878,7 @@ QPushButton::pressed{
     <string>=</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_24">
+  <widget class="QPushButton" name="btndecimal">
    <property name="geometry">
     <rect>
      <x>161</x>
