@@ -11,6 +11,13 @@
 
 ## Updates
 
+![Update](https://img.shields.io/badge/update%20data-16%2F01%2F2023-brightgreen)
+<pre>  
+    -Now support floating numbers.
+    -Added decimal button functionality.
+        -Now the formatting of decimals is based on the current location.
+</pre>
+
 ![Update](https://img.shields.io/badge/update%20data-15%2F01%2F2023-brightgreen)
 <pre>  
     -Added Div function
