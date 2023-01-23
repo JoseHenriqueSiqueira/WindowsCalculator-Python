@@ -22,7 +22,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(243, 243, 243);</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="btnpercent">
    <property name="geometry">
     <rect>
      <x>4</x>
@@ -58,7 +58,7 @@ QPushButton::pressed{
     <string>%</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="btnclear">
    <property name="geometry">
     <rect>
      <x>83</x>
@@ -166,7 +166,7 @@ QPushButton::pressed{
     <string>DEL</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="btnfrac">
    <property name="geometry">
     <rect>
      <x>4</x>
@@ -202,7 +202,7 @@ QPushButton::pressed{
     <string>1/x</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_6">
+  <widget class="QPushButton" name="btnpi">
    <property name="geometry">
     <rect>
      <x>4</x>
@@ -350,7 +350,7 @@ QPushButton::pressed{
     <string>7</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_10">
+  <widget class="QPushButton" name="btnsqr">
    <property name="geometry">
     <rect>
      <x>83</x>
@@ -386,7 +386,7 @@ QPushButton::pressed{
     <string>x²</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="raiz">
+  <widget class="QPushButton" name="btnsqrt">
    <property name="geometry">
     <rect>
      <x>161</x>

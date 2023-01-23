@@ -1,7 +1,7 @@
 # WindowsCalculator-Python
- Windows 10/11 simple calculator made in Python.
+ Windows 10/11 calculator made in Python.
 
-## Images
+## Screenshots
 <p float="left">
 <img src="/images/SumScreen.png?raw=true">
 <img src="/images/SubScreen.png?raw=true">
@@ -11,11 +11,26 @@
 
 ## Updates
 
+![Update](https://img.shields.io/badge/update%20data-23%2F01%2F2023-brightgreen)
+<pre>  
+    -Added complex operations.
+        ·Square Root
+        ·Exponentiation
+        ·Percentage
+        ·Fraction
+    -Added all button functionality
+        ·%
+        ·x²
+        ·1/x
+        ·√x
+        ·CE
+</pre>
+
 ![Update](https://img.shields.io/badge/update%20data-16%2F01%2F2023-brightgreen)
 <pre>  
     -Now support floating numbers.
     -Added decimal button functionality.
-        -Now the formatting of decimals is based on the current location.
+        ·Now the formatting of decimals is based on the current location.
 </pre>
 
 ![Update](https://img.shields.io/badge/update%20data-15%2F01%2F2023-brightgreen)
@@ -37,13 +52,23 @@
 
 ![Update](https://img.shields.io/badge/update%20data-07%2F01%2F2023-brightgreen)
 <pre>
-    Working on adding and subtracting whole numbers (I haven't added float values ​​yet).
+    -Working on adding and subtracting whole numbers (I haven't added float values ​​yet).
 </pre>
 
 ## Requirements
  ![Python](https://img.shields.io/badge/Python-v3.9-blue)
  <pre>
-    MODULES
-        -PyQt5
-        -sys
+    -MODULES
+        ·PyQt5
+        ·sys
 </pre>
+
+## How to run the Calculator
+<pre>
+    Download or clone the repository.
+    Make sure you have Python 3.9 and the required modules (PyQt5 and sys) installed.
+    Run the calculator.py file using the command "python calculator.py"
+</pre>
+
+## License
+    This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
