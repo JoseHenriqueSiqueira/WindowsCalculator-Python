@@ -4,11 +4,13 @@ from PyQt5.QtCore import *
 from PyQt5.uic import loadUi
 import sys
 
-class Window(QWidget):
+class Calculator(QWidget):
     def __init__(self):
-        super(Window, self).__init__()
+        super(Calculator, self).__init__()
         self.setFixedSize(320, 470)
         loadUi(r"Ui/Interface.ui",self)
+
+        # operations
         self.operations = {
             "+": lambda: float(self.nm1) + float(self.nm2),
             "-": lambda: abs(float(self.nm1)) - abs(float(self.nm2)) if self.nm2!='0' else (abs(float(self.nm1)) - abs(float(self.nm2)))*-1,
@@ -19,6 +21,7 @@ class Window(QWidget):
             "1/": lambda: 1 / float(self.numberOP),
             "SQR": lambda: float(self.numberOP) ** 2
         }
+        
         self.num='1'
         self.op=None
         self.nm1=None
@@ -38,10 +41,10 @@ class Window(QWidget):
         self.btnsub.clicked.connect(lambda: self.operation("-"))
         self.btnmult.clicked.connect(lambda: self.operation("x"))
         self.btndiv.clicked.connect(lambda: self.operation("÷"))
-        self.btnsqrt.clicked.connect(lambda: self.ComplexOP("√"))
-        self.btnpercent.clicked.connect(lambda: self.ComplexOP("%"))
-        self.btnfrac.clicked.connect(lambda: self.ComplexOP('1/'))
-        self.btnsqr.clicked.connect(lambda: self.ComplexOP('SQR'))
+        self.btnsqrt.clicked.connect(lambda: self.complex_operations("√"))
+        self.btnpercent.clicked.connect(lambda: self.complex_operations("%"))
+        self.btnfrac.clicked.connect(lambda: self.complex_operations('1/'))
+        self.btnsqr.clicked.connect(lambda: self.complex_operations('SQR'))
         self.btnresult.clicked.connect(self.result)
         self.btndecimal.setText(QLocale().decimalPoint())
         self.btndecimal.clicked.connect(self.number)
@@ -49,9 +52,9 @@ class Window(QWidget):
 
     def number(self):
         number = self.sender().text()
-        text=self.lineEdit.text()
-        decimal=QLocale().decimalPoint()
-        if self.sender().text()=='π':
+        text = self.lineEdit.text()
+        decimal = QLocale().decimalPoint()
+        if self.sender().text() == 'π':
             self.lineEdit.setText('3,14')
             if self.op:
                 self.nm2=self.lineEdit.text()
@@ -62,33 +65,33 @@ class Window(QWidget):
         if number == decimal and text.count(decimal) > 0:
             return
         if self.op:
-            if self.temp==0 and number!=decimal:
+            if self.temp == 0 and number != decimal:
                 self.lineEdit.setText(number)
             else:
-                self.lineEdit.setText(text+number)
-            self.temp=1
-            self.nm2=self.lineEdit.text()
-            self.num='2'
+                self.lineEdit.setText(text + number)
+            self.temp = 1
+            self.nm2 = self.lineEdit.text()
+            self.num = '2'
             return
         else:
-            if self.temp==0 and number!=decimal:
+            if self.temp == 0 and number != decimal:
                 self.lineEdit.setText(number)
             else:
                 self.lineEdit.setText(text+number)
-            self.temp=1
-            self.nm1=self.lineEdit.text()
-            self.num='1'
+            self.temp = 1
+            self.nm1 = self.lineEdit.text()
+            self.num = '1'
             return
 
-    def ComplexOP(self,op):
+    def complex_operations(self,op):
         self.numberOP = getattr(self, f'nm{self.num}', '0')
         if not self.nm2 and op == "%":
-            self.nm1='0'
+            self.nm1 = '0'
             self.label.setText('0')
             self.lineEdit.setText('0')
-            self.temp=0
+            self.temp = 0
             return
-        if self.label.text()==f"{op}( 0 )":
+        if self.label.text() == f"{op}( 0 )":
             return
         self.nm1 = self.nm1 or '0'
         self.nm2 = self.nm2 or self.nm1
@@ -98,9 +101,9 @@ class Window(QWidget):
                 n2 = self.nm2
                 self.nm1 = QLocale().toFloat(n1)[0]
                 self.nm2 = QLocale().toFloat(n2)[0]
-                self.numberOP=getattr(self, f'nm{self.num}')
-                fic=self.operations.get(op)()
-                self.nm2=fic
+                self.numberOP = getattr(self, f'nm{self.num}')
+                fic = self.operations.get(op)()
+                self.nm2 = fic
                 result = self.operations.get(self.op)()
                 formatted_result = QLocale().toString(result)
                 if QLocale().decimalPoint() in formatted_result:
@@ -108,32 +111,32 @@ class Window(QWidget):
                     if parts[1] and all(c == '0' for c in parts[1]):
                         formatted_result = parts[0] # remove trailing zeros
                 self.label.setText(f"{op}( {n1} )" if op==self.op else f"{n1} {self.op} {op}( {n2} ) =")
-                self.nm1=formatted_result
-                self.nm2=None
+                self.nm1 = formatted_result
+                self.nm2 = None
                 self.lineEdit.setText(self.nm1)
-                self.temp=0
-                self.op=""
+                self.temp = 0
+                self.op = ""
             except ZeroDivisionError:
                 self.lineEdit.setText("Zero Division")
             except Exception as e:
                 QMessageBox.critical(self,"ERRO", str(e))
         else:
             try:
-                n1=self.nm1
+                n1 = self.nm1
                 self.nm1 = QLocale().toFloat(n1)[0]
-                self.numberOP=getattr(self, f'nm{self.num}')
+                self.numberOP = getattr(self, f'nm{self.num}')
                 result = self.operations.get(op)()
                 formatted_result = QLocale().toString(result)
                 if QLocale().decimalPoint() in formatted_result:
                     parts = formatted_result.split(QLocale().decimalPoint())
                     if parts[1] and all(c == '0' for c in parts[1]):
                         formatted_result = parts[0] # remove trailing zeros   
-                self.nm1=formatted_result
-                self.nm2=None
+                self.nm1 = formatted_result
+                self.nm2 = None
                 self.lineEdit.setText(self.nm1)
-                self.temp=0
+                self.temp = 0
                 self.label.setText(f"{op}( {n1} )")
-                self.op=op
+                self.op = op
             except ZeroDivisionError:
                 self.lineEdit.setText("Zero Division")
             except Exception as e:
@@ -150,36 +153,36 @@ class Window(QWidget):
                     parts = formatted_result.split(QLocale().decimalPoint())
                     if parts[1] and all(c == '0' for c in parts[1]):
                         formatted_result = parts[0] # remove trailing zeros   
-                self.nm1=formatted_result
-                self.nm2=None
+                self.nm1 = formatted_result
+                self.nm2 = None
                 self.lineEdit.setText(self.nm1)
-                self.temp=0
-                self.label.setText(self.nm1+" "+ op)
-                self.op=op
+                self.temp = 0
+                self.label.setText(self.nm1 + " " + op)
+                self.op = op
             except ZeroDivisionError:
                 self.lineEdit.setText("Zero Division")
-        elif self.nm1 and self.negative=='s':
-            self.negative=""
-            self.nm1=str(int(self.nm1)*-1)
-            self.op=op
-            self.temp=0
-            self.label.setText(self.nm1+" "+ op)
+        elif self.nm1 and self.negative == 's':
+            self.negative = ""
+            self.nm1 = str(int(self.nm1) * -1)
+            self.op = op
+            self.temp = 0
+            self.label.setText(self.nm1 + " " + op)
         elif self.nm1:
-            if self.op=="√":
+            if self.op == "√":
                 self.label.setText(f"√({self.textn1}) {op}")
             else:
-                 self.label.setText(self.nm1+" "+ op)
-            self.op=op
-            self.temp=0
-        elif self.lineEdit.text()=="0" and op=='-':
-            self.negative="s"
+                 self.label.setText(self.nm1 + " " + op)
+            self.op = op
+            self.temp = 0
+        elif self.lineEdit.text() == "0" and op == '-':
+            self.negative = "s"
             self.label.setText("0 -")
-        elif self.lineEdit.text()=="0" and op!='-':
-            self.negative=""
-            self.label.setText("0 "+op)
-            self.nm1='0'
-            self.op=op
-            self.temp=0
+        elif self.lineEdit.text() == "0" and op != '-':
+            self.negative = ""
+            self.label.setText("0 " + op)
+            self.nm1 = '0'
+            self.op = op
+            self.temp = 0
 
     def result(self):
         if self.op in self.operations and self.nm2:
@@ -205,23 +208,23 @@ class Window(QWidget):
 
     def clear(self):
         self.lineEdit.setText('0')
-        self.temp=0
+        self.temp = 0
         if self.nm1:
-            self.nm2="0"
+            self.nm2 = "0"
             if "%" in self.label.text():
-                txt=self.label.text()
-                indice=txt.index(self.op)
+                txt = self.label.text()
+                indice = txt.index(self.op)
                 txt1 = txt[:indice]
-                self.label.setText(txt1+" "+self.op)
-                self.nm1= txt[:indice]
+                self.label.setText(txt1 + " " + self.op)
+                self.nm1 = txt[:indice]
         else:
-            self.nm1="0"
+            self.nm1 = "0"
         
     def reset(self):
-        self.op=""
-        self.nm1=None
-        self.nm2=None
-        self.temp=0
+        self.op = ""
+        self.nm1 = None
+        self.nm2 = None
+        self.temp = 0
         self.label.setText('')
         self.lineEdit.setText('0')
     
@@ -281,6 +284,6 @@ class Window(QWidget):
 
 if __name__=='__main__':
     app = QApplication(sys.argv)
-    ui = Window()
+    ui = Calculator()
     ui.show()
     sys.exit(app.exec_())
